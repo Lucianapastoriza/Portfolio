@@ -6,13 +6,12 @@
   <title>Luciana Pastoriza | Social Media Manager & Content Creator</title>
   <style>
     :root {
-      --bg: #090d16;
-      --card-bg: #131c2e;
-      --accent: #818cf8;
-      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #1e293b;
+      --bg: #ffffff;
+      --card-bg: #ffffff;
+      --accent: #721247; /* Morado principal */
+      --text: #721247;
+      --text-muted: #521837;
+      --border: #f1e6ed;
     }
     * { box-sizing: border-box; }
     body {
@@ -31,35 +30,40 @@
       margin: 0 auto;
     }
     .profile-title {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       margin-bottom: 0.2rem;
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--accent);
       letter-spacing: -0.03em;
     }
     .tagline {
       font-style: italic;
       color: var(--accent);
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 1rem;
+      font-weight: 500;
+      opacity: 0.9;
     }
     .subtitle {
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2.5rem;
     }
     .btn-primary {
       display: inline-block;
-      background: var(--accent-gradient);
-      color: #fff;
-      padding: 0.8rem 2rem;
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 0.85rem 2.2rem;
       border-radius: 999px;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 10px 20px rgba(114, 18, 71, 0.2);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background-color: #580d37;
     }
 
     .container {
@@ -69,10 +73,11 @@
     }
     .section-title {
       font-size: 2rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 2px solid var(--border);
       padding-bottom: 0.8rem;
       margin-top: 3rem;
       margin-bottom: 2.5rem;
+      color: var(--accent);
     }
 
     .project-card {
@@ -80,11 +85,12 @@
       border-radius: 20px;
       border: 1px solid var(--border);
       overflow: hidden;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(114, 18, 71, 0.04);
     }
     @media (min-width: 850px) {
       .project-card {
@@ -100,31 +106,36 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 0.5rem;
+      opacity: 0.85;
     }
     .project-info h3 {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       margin: 0 0 1rem;
-      color: #fff;
+      color: var(--accent);
     }
     .project-info p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 1.5rem;
     }
 
     .media-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
+      align-items: center;
     }
     .media-gallery img {
       width: 100%;
       height: auto;
-      max-height: 380px;
+      max-height: 400px;
       object-fit: contain;
-      background-color: #0b1120;
+      background-color: #ffffff;
       border-radius: 12px;
-      border: 1px solid var(--border);
+      transition: transform 0.3s ease;
+    }
+    .media-gallery img:hover {
+      transform: translateY(-4px);
     }
     
     .tags {
@@ -133,20 +144,20 @@
       gap: 0.5rem;
     }
     .tag {
-      background: rgba(99, 102, 241, 0.15);
-      color: #a5b4fc;
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 0.3rem 0.8rem;
+      background: #fdf4f8;
+      color: var(--accent);
+      border: 1px solid #f3dbe8;
+      padding: 0.35rem 0.9rem;
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 600;
     }
 
     .paid-media-card {
-      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-      border: 1px solid #4f46e5;
+      background: #fdf4f8;
+      border: 1px solid #f3dbe8;
       border-radius: 20px;
-      padding: 2.5rem 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
 
@@ -155,9 +166,9 @@
       padding: 4rem 2rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
-      margin-top: 4rem;
+      margin-top: 5rem;
     }
-    footer a { color: var(--accent); text-decoration: none; }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -187,11 +198,11 @@
       <div class="media-gallery">
         <div>
           <img src="lion-antes.jpg" alt="LION Antes">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">ANTES</p>
         </div>
         <div>
           <img src="lion-despues.jpg" alt="LION Después">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">AHORA</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">AHORA</p>
         </div>
       </div>
     </div>
@@ -211,11 +222,11 @@
       <div class="media-gallery">
         <div>
           <img src="suministro-antes.jpg" alt="Suministro Antes">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">ANTES</p>
         </div>
         <div>
           <img src="suministro-despues.jpg" alt="Suministro Después">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">AHORA</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">AHORA</p>
         </div>
       </div>
     </div>
@@ -234,11 +245,11 @@
       <div class="media-gallery">
         <div>
           <img src="yazmina-antes.jpg" alt="Yazmina Antes">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">ANTES</p>
         </div>
         <div>
           <img src="yazmina-despues.jpg" alt="Yazmina Después">
-          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">DESPUÉS</p>
+          <p style="font-size: 0.85rem; text-align: center; color: var(--accent); font-weight: 600;">DESPUÉS</p>
         </div>
       </div>
     </div>
@@ -262,8 +273,8 @@
     <!-- PAID MEDIA -->
     <h2 class="section-title">Paid Media & Performance</h2>
     <div class="paid-media-card">
-      <h3 style="color: #a5b4fc; margin-top: 0;">Campañas Publicitarias en Meta & Google Ads</h3>
-      <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto 0;">Planificación de pauta digital orientada a objetivos comerciales: captación de clientes potenciales (Leads), alcance de marca y conversión directa.</p>
+      <h3 style="color: #721247; margin-top: 0; font-size: 1.5rem;">Campañas Publicitarias en Meta & Google Ads</h3>
+      <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto 0; font-size: 1rem;">Planificación de pauta digital orientada a objetivos comerciales: captación de clientes potenciales (Leads), alcance de marca y conversión directa.</p>
     </div>
 
   </div>
