@@ -24,15 +24,14 @@
       line-height: 1.6;
     }
     
-    /* Hero Header */
     header {
-      padding: 6rem 2rem 4rem;
+      padding: 5rem 2rem 3rem;
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
     }
     .profile-title {
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-weight: 800;
       margin-bottom: 0.2rem;
       background: var(--accent-gradient);
@@ -43,59 +42,53 @@
     .tagline {
       font-style: italic;
       color: var(--accent);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
-      font-weight: 500;
     }
     .subtitle {
       color: var(--text-muted);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       max-width: 700px;
-      margin: 0 auto 2.5rem;
+      margin: 0 auto 2rem;
     }
     .btn-primary {
       display: inline-block;
       background: var(--accent-gradient);
       color: #fff;
-      padding: 0.85rem 2.2rem;
+      padding: 0.8rem 2rem;
       border-radius: 999px;
       font-weight: 700;
       text-decoration: none;
       box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
-      transition: transform 0.2s ease;
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2rem;
     }
     .section-title {
-      font-size: 2.2rem;
+      font-size: 2rem;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-      margin-top: 4rem;
-      margin-bottom: 3rem;
+      padding-bottom: 0.8rem;
+      margin-top: 3rem;
+      margin-bottom: 2.5rem;
     }
 
-    /* Grid de Proyectos Visuales */
     .project-card {
       background-color: var(--card-bg);
       border-radius: 20px;
       border: 1px solid var(--border);
       overflow: hidden;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
       padding: 2rem;
     }
-    @media (min-width: 900px) {
+    @media (min-width: 850px) {
       .project-card {
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
       }
     }
@@ -109,48 +102,31 @@
       margin-bottom: 0.5rem;
     }
     .project-info h3 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       margin: 0 0 1rem;
       color: #fff;
     }
     .project-info p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Contenedores Multimedia */
     .media-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
     }
     .media-gallery img {
       width: 100%;
-      height: 260px;
-      object-fit: cover;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      background-color: #0b1120;
       border-radius: 12px;
       border: 1px solid var(--border);
     }
     
-    /* Mockup de Celular para Videos Reels/TikTok */
-    .phone-mockup {
-      width: 100%;
-      max-width: 280px;
-      margin: 0 auto;
-      border-radius: 30px;
-      border: 8px solid #1e293b;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-      background: #000;
-    }
-    .phone-mockup video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Tags */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -160,18 +136,17 @@
       background: rgba(99, 102, 241, 0.15);
       color: #a5b4fc;
       border: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 0.35rem 0.9rem;
+      padding: 0.3rem 0.8rem;
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 600;
     }
 
-    /* Block Paid Media */
     .paid-media-card {
       background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
       border: 1px solid #4f46e5;
       border-radius: 20px;
-      padding: 3rem 2rem;
+      padding: 2.5rem 2rem;
       text-align: center;
     }
 
@@ -180,23 +155,22 @@
       padding: 4rem 2rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
-      margin-top: 5rem;
+      margin-top: 4rem;
     }
     footer a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
   <header>
     <h1 class="profile-title">Luciana Pastoriza</h1>
     <p class="tagline">La vida en gerundio</p>
     <p class="subtitle">Comunicadora Social & Social Media Manager. Especialista en creación de estrategia, rebranding, edición audiovisual y Paid Media.</p>
-    <a href="mailto:lucianapastoriza@gmail.com" class="btn-primary">Hablemos por Trabajo</a>
+    <a href="mailto:lucianapastoriza@gmail.com" class="btn-primary">Contacto</a>
   </header>
 
   <div class="container">
-    <h2 class="section-title">Casos de Éxito & Producción Visual</h2>
+    <h2 class="section-title">Trabajos & Transformación Visual</h2>
 
     <!-- PROYECTO 1: LION -->
     <div class="project-card">
@@ -210,12 +184,15 @@
           <span class="tag">Guionismo</span>
         </div>
       </div>
-      <!-- Celular Reproductor de Video -->
-      <div class="phone-mockup">
-        <video controls poster="assets/lion-thumb.jpg">
-          <source src="assets/lion-reel.mp4" type="video/mp4">
-          Tu navegador no soporta el reproductor de video.
-        </video>
+      <div class="media-gallery">
+        <div>
+          <img src="assets/lion-antes.jpg" alt="LION Antes">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
+        </div>
+        <div>
+          <img src="assets/lion-despues.jpg" alt="LION Después">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">AHORA</p>
+        </div>
       </div>
     </div>
 
@@ -231,33 +208,54 @@
           <span class="tag">Lead Gen</span>
         </div>
       </div>
-      <!-- Muestra Antes y Después -->
       <div class="media-gallery">
         <div>
-          <img src="assets/suministro-antes.jpg" alt="Antes">
+          <img src="assets/suministro-antes.jpg" alt="Suministro Antes">
           <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
         </div>
         <div>
-          <img src="assets/suministro-despues.jpg" alt="Después">
+          <img src="assets/suministro-despues.jpg" alt="Suministro Después">
           <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">AHORA</p>
         </div>
       </div>
     </div>
 
-    <!-- PROYECTO 3: MALULA PASTELERÍA -->
+    <!-- PROYECTO 3: YAZMINA -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="category">Comunicación Estratégica & Estética</div>
+        <h3>Yazmina Estética & Belleza</h3>
+        <p>Desarrollo de estrategia visual con paleta de tonos suaves. Contenido enfocado en destacar beneficios y promociones para aumentar interacciones y reservas directas.</p>
+        <div class="tags">
+          <span class="tag">Estética de Marca</span>
+          <span class="tag">Aumento de Reservas</span>
+        </div>
+      </div>
+      <div class="media-gallery">
+        <div>
+          <img src="assets/yazmina-antes.jpg" alt="Yazmina Antes">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
+        </div>
+        <div>
+          <img src="assets/yazmina-despues.jpg" alt="Yazmina Después">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">DESPUÉS</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 4: MALULA -->
     <div class="project-card">
       <div class="project-info">
         <div class="category">Identidad de Marca & Lanzamiento</div>
         <h3>Malula Pastelería</h3>
-        <p>Estrategia visual transmitiendo calidez artesanal con ilustraciones a mano alzada y tipografías cursivas. Proyección visual aplicada a mockups para local físico.</p>
+        <p>Estrategia visual transmitiendo calidez artesanal con ilustraciones a mano alzada y tipografías cursivas. Identidad adaptada a local físico.</p>
         <div class="tags">
           <span class="tag">Diseño de Logo</span>
-          <span class="tag">Mockups</span>
+          <span class="tag">Branding</span>
         </div>
       </div>
       <div class="media-gallery">
-        <img src="assets/malula-mockup1.jpg" alt="Mockup Vasos">
-        <img src="assets/malula-mockup2.jpg" alt="Mockup Cartelería">
+        <img src="assets/malula-actual.jpg" alt="Malula Pastelería">
       </div>
     </div>
 
