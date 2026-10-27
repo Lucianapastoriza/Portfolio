@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Social Media & Content Creator</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #6366f1;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .description {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--card-bg);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #334155;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #312e81;
+      color: #c7d2fe;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tu Nombre</h1>
+    <p class="subtitle">Social Media Manager & Content Creator</p>
+    <p class="description">Especialista en estrategia digital, creación de contenido, branding, edición audiovisual y campañas de Paid Media.</p>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Especialidades & Experiencia</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Estrategia & Branding</h3>
+        <p>Desarrollo de identidad visual, planificación de contenidos y posicionamiento de marca para diversas cuentas.</p>
+        <span class="badge">Social Media</span>
+      </div>
+      <div class="card">
+        <h3>Edición de Video & Estáticas</h3>
+        <p>Producción y edición de piezas audiovisuales para Reels/TikTok y diseño de placas gráficas de alto impacto.</p>
+        <span class="badge">Contenido Visual</span>
+      </div>
+      <div class="card">
+        <h3>Paid Media (Ads)</h3>
+        <p>Gestión y optimización de campañas publicitarias para maximizar alcance, interacciones y conversiones.</p>
+        <span class="badge">Meta & Google Ads</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 - Portfolio Profesional</p>
+  </footer>
+
+</body>
+</html>
