@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luciana Pastoriza | Social Media Manager & Comunicadora</title>
+  <title>Luciana Pastoriza | Social Media Manager & Content Creator</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
+      --bg: #090d16;
+      --card-bg: #131c2e;
       --accent: #818cf8;
-      --accent-hover: #6366f1;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
       --text: #f8fafc;
       --text-muted: #94a3b8;
-      --border: #334155;
+      --border: #1e293b;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
@@ -25,236 +23,256 @@
       padding: 0;
       line-height: 1.6;
     }
+    
+    /* Hero Header */
     header {
-      padding: 5rem 2rem 3rem;
+      padding: 6rem 2rem 4rem;
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
     }
-    h1 {
-      font-size: 2.8rem;
+    .profile-title {
+      font-size: 3.2rem;
+      font-weight: 800;
       margin-bottom: 0.2rem;
-      letter-spacing: -0.02em;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.03em;
     }
     .tagline {
       font-style: italic;
       color: var(--accent);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       margin-bottom: 1rem;
+      font-weight: 500;
     }
     .subtitle {
       color: var(--text-muted);
-      font-size: 1.2rem;
-      font-weight: 400;
+      font-size: 1.15rem;
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2.5rem;
     }
-    .btn-contact {
+    .btn-primary {
       display: inline-block;
-      background-color: var(--accent);
-      color: #0f172a;
-      padding: 0.75rem 1.8rem;
+      background: var(--accent-gradient);
+      color: #fff;
+      padding: 0.85rem 2.2rem;
       border-radius: 999px;
       font-weight: 700;
       text-decoration: none;
-      transition: all 0.2s ease;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+      transition: transform 0.2s ease;
     }
-    .btn-contact:hover {
-      background-color: #a5b4fc;
-      transform: translateY(-2rem);
+    .btn-primary:hover {
+      transform: translateY(-3px);
     }
+
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
     .section-title {
-      font-size: 2rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 0.75rem;
-      margin-top: 3rem;
-      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-top: 4rem;
+      margin-bottom: 3rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-    .card {
+
+    /* Grid de Proyectos Visuales */
+    .project-card {
       background-color: var(--card-bg);
-      border-radius: 16px;
-      padding: 1.8rem;
+      border-radius: 20px;
       border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease;
+      overflow: hidden;
+      margin-bottom: 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem;
     }
-    .card:hover {
-      transform: translateY(-4px);
+    @media (min-width: 900px) {
+      .project-card {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+      }
     }
-    .card h3 {
-      margin-top: 0;
-      color: #fff;
-      font-size: 1.4rem;
-    }
-    .card .category {
+    
+    .project-info .category {
       color: var(--accent);
       font-size: 0.85rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       margin-bottom: 0.5rem;
     }
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
+    .project-info h3 {
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+      color: #fff;
     }
+    .project-info p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contenedores Multimedia */
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .media-gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    
+    /* Mockup de Celular para Videos Reels/TikTok */
+    .phone-mockup {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      border-radius: 30px;
+      border: 8px solid #1e293b;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      background: #000;
+    }
+    .phone-mockup video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Tags */
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
     .tag {
-      background: #312e81;
-      color: #c7d2fe;
-      padding: 0.3rem 0.8rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.35rem 0.9rem;
       border-radius: 999px;
       font-size: 0.8rem;
-      font-weight: 500;
+      font-weight: 600;
     }
-    .paid-media-box {
-      background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
+
+    /* Block Paid Media */
+    .paid-media-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
       border: 1px solid #4f46e5;
-      border-radius: 16px;
-      padding: 2rem;
-      margin-top: 1rem;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-    .paid-media-box h3 {
-      color: #a5b4fc;
-      margin-top: 0;
-    }
+
     footer {
       text-align: center;
       padding: 4rem 2rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
-      margin-top: 4rem;
+      margin-top: 5rem;
     }
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    footer a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
+  <!-- HERO SECTION -->
   <header>
-    <h1>Luciana Pastoriza</h1>
+    <h1 class="profile-title">Luciana Pastoriza</h1>
     <p class="tagline">La vida en gerundio</p>
-    <p class="subtitle">Comunicadora Social & Social Media Manager especialista en creación de estrategia, rebranding, edición visual/audiovisual y crecimiento de marcas.</p>
-    <a href="mailto:tu-email@ejemplo.com" class="btn-contact">Contactame</a>
+    <p class="subtitle">Comunicadora Social & Social Media Manager. Especialista en creación de estrategia, rebranding, edición audiovisual y Paid Media.</p>
+    <a href="mailto:lucianapastoriza@gmail.com" class="btn-primary">Hablemos por Trabajo</a>
   </header>
 
   <div class="container">
-    <h2 class="section-title">Trabajos &Casos de Éxito</h2>
-    
-    <div class="grid">
-      <!-- LION -->
-      <div class="card">
-        <div>
-          <div class="category">Rebranding & Contenido Audiovisual</div>
-          <h3>LION Iluminación</h3>
-          <p>Lideré la estrategia de contenidos luego de su proceso de rebranding, traduciendo el nuevo posicionamiento (cercano, joven y disruptivo). Desarrollo de guiones, edición de video nativo para Reels/TikTok/LinkedIn y creación de contenido frente y detrás de cámara.</p>
-        </div>
+    <h2 class="section-title">Casos de Éxito & Producción Visual</h2>
+
+    <!-- PROYECTO 1: LION -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="category">Rebranding & Formato Audiovisual</div>
+        <h3>LION Iluminación</h3>
+        <p>Estrategia integral post-rebranding para posicionar la marca con un tono joven y disruptivo. Creación de guiones, edición de video para Reels/TikTok y presencia frente/detrás de cámara.</p>
         <div class="tags">
           <span class="tag">Estrategia</span>
-          <span class="tag">Guionismo</span>
           <span class="tag">Edición de Video</span>
+          <span class="tag">Guionismo</span>
         </div>
       </div>
+      <!-- Celular Reproductor de Video -->
+      <div class="phone-mockup">
+        <video controls poster="assets/lion-thumb.jpg">
+          <source src="assets/lion-reel.mp4" type="video/mp4">
+          Tu navegador no soporta el reproductor de video.
+        </video>
+      </div>
+    </div>
 
-      <!-- Suministro de Obras -->
-      <div class="card">
-        <div>
-          <div class="category">Identidad Visual & Lead Gen</div>
-          <h3>Suministro de Obras</h3>
-          <p>Optimización estética y unificación de identidad visual (paleta de colores, tipografías y grilla). Estrategia enfocada en captar leads calificados y tráfico en un sector técnico mediante contenido educativo y profesional que genera confianza.</p>
-        </div>
+    <!-- PROYECTO 2: SUMINISTRO DE OBRAS -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="category">Rediseño & Captación de Leads</div>
+        <h3>Suministro de Obras</h3>
+        <p>Unificación de la identidad visual con nueva paleta de colores, tipografías y orden de grilla. Generación de contenido educativo profesional para convertir seguidores en clientes.</p>
         <div class="tags">
           <span class="tag">Branding</span>
-          <span class="tag">Captación de Leads</span>
-          <span class="tag">Diseño de Grilla</span>
+          <span class="tag">Antes & Después</span>
+          <span class="tag">Lead Gen</span>
         </div>
       </div>
-
-      <!-- Yazmina -->
-      <div class="card">
+      <!-- Muestra Antes y Después -->
+      <div class="media-gallery">
         <div>
-          <div class="category">Comunicación Estratégica & Estética</div>
-          <h3>Yazmina Estética & Belleza</h3>
-          <p>Desarrollo de estrategia visual con paleta de tonos suaves y femeninos. Contenido enfocado en destacar beneficios, explicaciones informativas de tratamientos y promociones para aumentar interacciones y reservas directas.</p>
+          <img src="assets/suministro-antes.jpg" alt="Antes">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">ANTES</p>
         </div>
-        <div class="tags">
-          <span class="tag">Estética de Marca</span>
-          <span class="tag">Aumento de Reservas</span>
+        <div>
+          <img src="assets/suministro-despues.jpg" alt="Después">
+          <p style="font-size: 0.8rem; text-align: center; color: var(--text-muted);">AHORA</p>
         </div>
       </div>
+    </div>
 
-      <!-- Amsterdam -->
-      <div class="card">
-        <div>
-          <div class="category">Community Building & Producción</div>
-          <h3>Amsterdam Parque Leloir</h3>
-          <p>Gestión integral para bar gastronómico: producción fotográfica y de video, calendario de contenidos, organización de eventos y sorteos. Construcción de una comunidad fiel alcanzada de forma 100% orgánica.</p>
-        </div>
-        <div class="tags">
-          <span class="tag">Crecimiento Orgánico</span>
-          <span class="tag">Foto & Video</span>
-          <span class="tag">Community Management</span>
-        </div>
-      </div>
-
-      <!-- Pastelería Malula -->
-      <div class="card">
-        <div>
-          <div class="category">Branding de Lanzamiento</div>
-          <h3>Malula Pastelería</h3>
-          <p>Estrategia de identidad para emprendimiento familiar transmitiendo lo artesanal y hogareño mediante ilustraciones a mano alzada, paleta cálida y aplicación funcional de marca proyectada para local físico.</p>
-        </div>
+    <!-- PROYECTO 3: MALULA PASTELERÍA -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="category">Identidad de Marca & Lanzamiento</div>
+        <h3>Malula Pastelería</h3>
+        <p>Estrategia visual transmitiendo calidez artesanal con ilustraciones a mano alzada y tipografías cursivas. Proyección visual aplicada a mockups para local físico.</p>
         <div class="tags">
           <span class="tag">Diseño de Logo</span>
-          <span class="tag">Branding</span>
           <span class="tag">Mockups</span>
         </div>
       </div>
-
-      <!-- Decero Gráfica -->
-      <div class="card">
-        <div>
-          <div class="category">Renovación de Marca</div>
-          <h3>Decero Gráfica Integral</h3>
-          <p>Renovación total de estrategia, logo y colores hacia tonos más vibrantes y modernos para posicionar el negocio de marquesinas, cartelería e impresiones.</p>
-        </div>
-        <div class="tags">
-          <span class="tag">Rediseño</span>
-          <span class="tag">Posicionamiento</span>
-        </div>
+      <div class="media-gallery">
+        <img src="assets/malula-mockup1.jpg" alt="Mockup Vasos">
+        <img src="assets/malula-mockup2.jpg" alt="Mockup Cartelería">
       </div>
     </div>
 
-    <!-- Paid Media Section -->
-    <h2 class="section-title">Paid Media & Publicidad Digital</h2>
-    <div class="paid-media-box">
-      <h3>Estrategia Publicitaria (Meta Ads & Google Ads)</h3>
-      <p>Complemento la estrategia orgánica con la planificación y ejecución de pauta digital para campañas orientadas a conversión, generación de clientes potenciales y maximización de alcance en cuentas B2B y B2C.</p>
+    <!-- PAID MEDIA -->
+    <h2 class="section-title">Paid Media & Performance</h2>
+    <div class="paid-media-card">
+      <h3 style="color: #a5b4fc; margin-top: 0;">Campañas Publicitarias en Meta & Google Ads</h3>
+      <p style="color: var(--text-muted); max-width: 700px; margin: 1rem auto 0;">Planificación de pauta digital orientada a objetivos comerciales: captación de clientes potenciales (Leads), alcance de marca y conversión directa.</p>
     </div>
+
   </div>
 
   <footer>
     <p>© 2026 Luciana Pastoriza — Comunicadora Social</p>
-    <p><a href="https://linkedin.com" target="_blank">LinkedIn</a> | <a href="mailto:tu-email@ejemplo.com">Contacto Email</a></p>
+    <p><a href="https://linkedin.com" target="_blank">LinkedIn</a> | <a href="mailto:lucianapastoriza@gmail.com">Contacto Email</a></p>
   </footer>
 
 </body>
